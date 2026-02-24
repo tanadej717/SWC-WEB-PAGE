@@ -3,7 +3,7 @@
     <div class="container mx-auto flex h-16 items-center justify-between px-4">
       <NuxtLink to="/" class="group flex items-center gap-3">
         <div
-          class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-(--swc-red-900) bg-(--swc-red-800) text-xs font-semibold tracking-widest text-white shadow-md"
+          class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-(--swc-red-900) bg-(--swc-red-800) text-(--swc-white) text-xs font-semibold tracking-widest shadow-md"
         >
           S.W.C
         </div>

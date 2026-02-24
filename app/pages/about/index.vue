@@ -1,6 +1,8 @@
+
 <template>
-    <h1>hellow home</h1>
+
 </template>
+
 <script lang="ts">
 
 </script>
