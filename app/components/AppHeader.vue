@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <header class="border-b bg-(--swc-surface) text-(--swc-text-color)" style="border-color: var(--swc-border);">
     <div class="container mx-auto flex h-16 items-center justify-between px-4">
       <NuxtLink to="/" class="group flex items-center gap-3 rounded-circle">
@@ -16,41 +16,15 @@
         </span>
       </NuxtLink>
 
-      <nav class="hidden items-center gap-6 text-sm md:flex">
+      <nav class="hidden items-center gap-6 text-sm md:flex" aria-label="Main navigation">
         <NuxtLink
-          to="/"
+          v-for="item in navItems"
+          :key="item.to"
+          :to="item.to"
           class="border-b-2 border-transparent pb-1 transition hover:border-(--swc-main-color) hover:text-(--swc-main-color)"
           exact-active-class="border-(--swc-main-color) text-(--swc-main-color) font-bold"
         >
-          รู้จักพวกเรา
-        </NuxtLink>
-        <NuxtLink
-          to="/portfolio"
-          class="border-b-2 border-transparent pb-1 transition hover:border-(--swc-main-color) hover:text-(--swc-main-color)"
-          exact-active-class="border-(--swc-main-color) text-(--swc-main-color) font-bold"
-        >
-          ผลงานของเรา
-        </NuxtLink>
-        <NuxtLink
-          to="/products"
-          class="border-b-2 border-transparent pb-1 transition hover:border-(--swc-main-color) hover:text-(--swc-main-color)"
-          exact-active-class="border-(--swc-main-color) text-(--swc-main-color) font-bold"
-        >
-          สินค้าของเรา
-        </NuxtLink>
-        <NuxtLink
-          to="/services"
-          class="border-b-2 border-transparent pb-1 transition hover:border-(--swc-main-color) hover:text-(--swc-main-color)"
-          exact-active-class="border-(--swc-main-color) text-(--swc-main-color) font-bold"
-        >
-          บริการ
-        </NuxtLink>
-        <NuxtLink
-          to="/contact"
-          class="border-b-2 border-transparent pb-1 transition hover:border-(--swc-main-color) hover:text-(--swc-main-color)"
-          exact-active-class="border-(--swc-main-color) text-(--swc-main-color) font-bold"
-        >
-          ติดต่อ
+          {{ item.label }}
         </NuxtLink>
       </nav>
 
@@ -63,7 +37,7 @@
           data-theme-toggle
           @click="toggleTheme"
         >
-          <span class="h-6 w-6 rounded-full bg-(--swc-gray-300)" :class="{ 'bg-(--swc-main-color)': isDark }"></span>
+          <span class="h-6 w-6 rounded-full bg-(--swc-gray-300)" :class="{ 'bg-(--swc-main-color)': isDark }" />
           <span class="hidden sm:inline">Dark Mode</span>
         </button>
 
@@ -72,19 +46,32 @@
           class="inline-flex h-9 w-9 items-center justify-center rounded-md border text-(--swc-text-color) md:hidden"
           style="border-color: var(--swc-border); background: var(--swc-card);"
           aria-label="Open menu"
+          :aria-expanded="isMenuOpen"
+          aria-controls="mobile-menu"
+          @click="isMenuOpen = !isMenuOpen"
         >
-          <span class="block h-0.5 w-4 bg-(--swc-main-color)"></span>
+          <span class="block h-0.5 w-4 bg-(--swc-main-color)" />
         </button>
       </div>
     </div>
 
-    <div class="border-t bg-(--swc-surface-2) px-4 py-3 md:hidden" style="border-color: var(--swc-border);">
+    <div
+      v-show="isMenuOpen"
+      id="mobile-menu"
+      class="border-t bg-(--swc-surface-2) px-4 py-3 md:hidden"
+      style="border-color: var(--swc-border);"
+    >
       <div class="flex flex-wrap gap-4 text-sm">
-        <NuxtLink to="/" class="text-(--swc-main-color)">รู้จักพวกเรา</NuxtLink>
-        <NuxtLink to="/portfolio" class="hover:text-(--swc-main-color)">ผลงานของเรา</NuxtLink>
-        <NuxtLink to="/products" class="hover:text-(--swc-main-color)">สินค้าของเรา</NuxtLink>
-        <NuxtLink to="/services" class="hover:text-(--swc-main-color)">บริการ</NuxtLink>
-        <NuxtLink to="/contact" class="hover:text-(--swc-main-color)">ติดต่อ</NuxtLink>
+        <NuxtLink
+          v-for="item in navItems"
+          :key="item.to"
+          :to="item.to"
+          class="hover:text-(--swc-main-color)"
+          exact-active-class="text-(--swc-main-color) font-bold"
+          @click="isMenuOpen = false"
+        >
+          {{ item.label }}
+        </NuxtLink>
       </div>
     </div>
   </header>
@@ -92,4 +79,13 @@
 
 <script setup lang="ts">
 const { isDark, toggleTheme } = useTheme();
+
+const isMenuOpen = ref(false);
+const navItems = [
+  { to: "/", label: "รู้จักพวกเรา" },
+  { to: "/portfolio", label: "ผลงานของเรา" },
+  { to: "/products", label: "สินค้าของเรา" },
+  { to: "/services", label: "บริการ" },
+  { to: "/contact", label: "ติดต่อ" },
+];
 </script>

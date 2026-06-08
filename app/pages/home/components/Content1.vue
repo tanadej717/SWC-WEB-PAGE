@@ -1,7 +1,8 @@
 <template>
     <div class="mx-auto grid  grid-cols-1 gap-4 px-4 sm:gap-6 sm:px-6 md:grid-cols-2 md:items-stretch">
         <div class="overflow-hidden rounded-xl border border-(--swc-border) bg-(--swc-surface)">
-            <NuxtImg src="/web-800x800.jpg" alt="อุปกรณ์และตู้ไฟสำหรับงานชุบ"
+            <NuxtImg
+src="/web-800x800.jpg" alt="อุปกรณ์และตู้ไฟสำหรับงานชุบ"
                 class="h-100 min-h-64 w-full object-cover" />
         </div>
         <article class="flex flex-col  rounded-xl p-5 ">
