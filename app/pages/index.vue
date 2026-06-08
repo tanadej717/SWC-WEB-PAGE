@@ -1,12 +1,10 @@
 <template>
-  <div>
+  <div class="bg-(--swc-card) text-(--swc-text-color)">
     <HeroContent />
-    <section class="bg-(--swc-card) py-8 text-(--swc-text-color) md:py-6" aria-labelledby="product-highlight-title">
-      <Content1 />
-      <Content2 />
-      <AppHistorybar />
-      <Content3 />
-    </section>
+    <Content1 />
+    <Content2 />
+    <AppHistorybar />
+    <Content3 />
   </div>
 </template>
 
@@ -16,7 +14,18 @@ import Content2 from './home/components/Content2.vue';
 import Content3 from './home/components/Content3.vue';
 import HeroContent from './home/components/HeroContent.vue';
 
+const title = "ศรีวิชัยโลหะกิจ | จำหน่ายอุปกรณ์งานชุบ ตู้ไฟชุบ น้ำยาชุบ และอุปกรณ์โรงชุบ";
+const description =
+  "ศรีวิชัยโลหะกิจ จำหน่ายอุปกรณ์งานชุบ ตู้ไฟชุบมือหนึ่งและมือสอง น้ำยาชุบนิกเกิล น้ำยาชุบทองแดง อะไหล่ตู้ไฟ เบรคเกอร์ เครื่องดูดอากาศ และอุปกรณ์โรงชุบ พร้อมให้คำปรึกษาเปิดโรงชุบและออกแบบระบบไฟงานชุบ";
+
 useSeoMeta({
-  title: "ศรีวิชัยโลหะกิจ | จำหน่ายอุปกรณ์การชุบ ตู้ไฟชุบงานมือ 2 น้ำยาชุบ และอุปกรณ์โรงงาน",
+  title,
+  description,
+  keywords:
+    "อุปกรณ์งานชุบ,จำหน่ายอุปกรณ์งานชุบ,ตู้ไฟชุบ,ตู้ไฟชุบมือสอง,น้ำยาชุบ,น้ำยาชุบนิกเกิล,น้ำยาชุบทองแดง,อุปกรณ์โรงชุบ,ออกแบบระบบไฟงานชุบ,คำนวณกระแสงานชุบ,ให้คำปรึกษาเปิดโรงชุบ,อะไหล่ตู้ไฟชุบ,เบรคเกอร์งานชุบ,เครื่องดูดอากาศโรงงาน,ศรีวิชัยโลหะกิจ,SWC โลหะกิจ",
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
 });
 </script>
