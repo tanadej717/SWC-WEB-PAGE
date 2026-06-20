@@ -1,0 +1,30 @@
+# Dependencies & build artifacts (regenerate ใน container เสมอ)
+node_modules
+.nuxt
+.output
+dist
+
+# Version control & CI
+.git
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+
+# Secrets / env
+.env
+.env.*
+
+# Tooling / agent
+.claude
+
+# OS / IDE
+.DS_Store
+.vscode
+.idea
+*.swp
+
+# Docker self
+Dockerfile
+.dockerignore
