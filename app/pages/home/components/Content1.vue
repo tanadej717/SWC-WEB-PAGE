@@ -7,6 +7,11 @@
           alt="ตู้ไฟชุบและอุปกรณ์งานชุบสำหรับโรงงานอุตสาหกรรม"
           class="h-full min-h-96 w-full object-cover"
           sizes="(min-width: 1024px) 45vw, 100vw"
+          width="800"
+          height="800"
+          format="webp"
+          quality="80"
+          loading="lazy"
         />
       </div>
 
@@ -26,7 +31,8 @@
 
         <div class="mt-10 grid gap-3 sm:grid-cols-2">
           <div v-for="item in highlights" :key="item" class="flex items-start gap-3 border-t border-(--swc-border) pt-4">
-            <Icon name="heroicons:check-circle" class="mt-1 text-2xl text-(--swc-main-color)" />
+            <!-- width/height กำหนดชัดเพื่อจอง space ก่อน hydration — ป้องกัน CLS -->
+            <Icon name="heroicons:check-circle" class="mt-1 shrink-0 text-(--swc-main-color)" style="width:1.5rem;height:1.5rem;display:block;" />
             <p class="leading-7 text-(--swc-text-color)">{{ item }}</p>
           </div>
         </div>

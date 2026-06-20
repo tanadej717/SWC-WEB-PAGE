@@ -10,7 +10,7 @@
           <p class="text-sm text-(--swc-gray-100)">
             เราให้บริการและดูแลด้วยมาตรฐานมืออาชีพ ใส่ใจคุณภาพในทุกขั้นตอน
           </p>
-        </section>
+        </div>
 
         <div class="space-y-3">
           <div class="text-sm font-semibold uppercase tracking-wider text-(--swc-gray-100)">ติดต่อเรา</div>
@@ -39,7 +39,9 @@
         class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t pt-4 text-xs text-(--swc-gray-100)"
         style="border-color: var(--swc-border);"
       >
-        <div>© {{ new Date().getFullYear() }} SWC Company. All rights reserved.</div>
+        <!-- ใช้ currentYear จาก useState เพื่อให้ SSR และ client hydrate ค่าเดียวกัน
+             หลีกเลี่ยง hydration mismatch ที่เกิดจาก new Date() ที่อาจต่างกันระหว่าง server/client -->
+        <div>© {{ currentYear }} SWC Company. All rights reserved.</div>
         <div class="flex items-center gap-2">
           <span class="h-1.5 w-1.5 rounded-full bg-(--swc-gray-100)"></span>
           <span>Trusted Service. Quality First.</span>

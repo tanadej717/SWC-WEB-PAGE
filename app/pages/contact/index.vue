@@ -26,7 +26,9 @@
 <script setup lang="ts">
 import Content3 from '../home/components/Content3.vue';
 
-useSeoMeta({
-  title: "ติดต่อเรา | ศรีวิชัยโลหะกิจ",
+useSeoPage({
+  title: 'ติดต่อเรา | ศรีวิชัยโลหะกิจ',
+  description: 'ติดต่อศรีวิชัยโลหะกิจ โทร 061-676-6837 อีเมล swc.service725@gmail.com เปิดจันทร์-เสาร์ 09:00-18:00 สำหรับคำปรึกษาอุปกรณ์งานชุบและการเปิดโรงชุบ',
+  path: '/contact',
 });
 </script>

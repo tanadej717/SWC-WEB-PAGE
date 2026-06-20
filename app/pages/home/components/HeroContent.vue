@@ -5,6 +5,10 @@
       alt="อุปกรณ์งานชุบ ตู้ไฟชุบ และระบบสำหรับโรงชุบของศรีวิชัยโลหะกิจ"
       class="absolute inset-0 -z-20 h-full w-full object-cover"
       sizes="100vw"
+      width="1280"
+      height="720"
+      format="webp"
+      quality="80"
       preload
     />
     <div class="absolute inset-0 -z-10 bg-black/55 dark:bg-black/70" />
@@ -33,13 +37,13 @@
           <div class="mt-8 flex flex-wrap gap-3">
             <NuxtLink
               to="/contact"
-              class="inline-flex min-h-12 items-center justify-center bg-(--swc-main-color) px-6 text-sm font-semibold text-white transition hover:bg-(--swc-red-700)"
+              class="inline-flex min-h-12 items-center justify-center bg-(--swc-main-color) px-6 text-sm font-semibold text-white transition-colors hover:bg-(--swc-red-700)"
             >
               ติดต่อเรา
             </NuxtLink>
             <NuxtLink
               to="/products"
-              class="inline-flex min-h-12 items-center justify-center border border-white/35 px-6 text-sm font-semibold text-white transition hover:bg-white hover:text-(--swc-red-900)"
+              class="inline-flex min-h-12 items-center justify-center border border-white/35 px-6 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-(--swc-red-900)"
             >
               ดูสินค้า
             </NuxtLink>

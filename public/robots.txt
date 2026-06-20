@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://swclohakit.com/sitemap.xml

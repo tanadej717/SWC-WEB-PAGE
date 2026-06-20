@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap');
-
+/* Google Fonts โหลดผ่าน <link> ใน nuxt.config.ts แทน @import
+   เพื่อหลีกเลี่ยง render-blocking ที่เกิดจาก CSS @import chain */
 body {
   font-family: 'IBM Plex Sans Thai', sans-serif;
 }

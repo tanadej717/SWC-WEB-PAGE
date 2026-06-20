@@ -14,7 +14,7 @@
           </p>
           <NuxtLink
             to="/services"
-            class="mt-8 inline-flex min-h-12 items-center justify-center border border-(--swc-main-color) px-6 text-sm font-semibold text-(--swc-main-color) transition hover:bg-(--swc-main-color) hover:text-white"
+            class="mt-8 inline-flex min-h-12 items-center justify-center border border-(--swc-main-color) px-6 text-sm font-semibold text-(--swc-main-color) transition-colors hover:bg-(--swc-main-color) hover:text-white"
           >
             ดูบริการทั้งหมด
           </NuxtLink>
@@ -37,12 +37,26 @@
           alt="งานติดตั้งระบบงานชุบและอุปกรณ์โรงชุบ"
           class="h-80 w-full object-cover lg:h-120"
           sizes="100vw"
+          width="1280"
+          height="720"
+          format="webp"
+          quality="80"
+          loading="lazy"
         />
       </div>
 
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div v-for="image in images" :key="image.src" class="overflow-hidden bg-(--swc-surface)">
-          <NuxtImg :src="image.src" :alt="image.alt" class="h-80 w-full object-cover" />
+          <NuxtImg
+            :src="image.src"
+            :alt="image.alt"
+            class="h-80 w-full object-cover"
+            width="400"
+            height="400"
+            format="webp"
+            quality="80"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
