@@ -1,31 +1,21 @@
-﻿<template>
-    <div class="min-h-screen">
-        <AppHeader />
-        <main>
+<template>
+    <div class="min-h-screen flex flex-col">
+        <MyHeader />
+        <!-- container/padding ถูกจัดการโดยแต่ละ page แล้ว — layout ทำหน้าที่แค่ stretch -->
+        <main class="flex-1">
             <slot />
         </main>
-        <AppFooter />
+        <MyFooter />
     </div>
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-    title: "ศรีวิชัยโลหะกิจ | จำหน่ายอุปกรณ์การชุบ ตู้ไฟชุบงานมือ 2 น้ำยาชุบ และอุปกรณ์โรงงาน",
-    description:
-        "ศรีวิชัยโลหะกิจ จำหน่ายอุปกรณ์การชุบ ตู้ไฟชุบงานมือ 2 น้ำยาชุบนิกเกิล ทองแดง โลหะชุบ อุปกรณ์โรงงานอุตสาหกรรม เครื่องดูดอากาศ อะไหล่ตู้ไฟ เบรคเกอร์ พร้อมให้คำปรึกษาเปิดโรงชุบขนาดเล็กถึงขนาดใหญ่ โดยทีมช่างและผู้มีประสบการณ์มากกว่า 20 ปี",
-    keywords:
-        "จำหน่ายอุปกรณ์การชุบ,ตู้ไฟชุบงานมือ 2,น้ำยาชุบ,นิกเกิล,ทองแดง,โลหะชุบ,อุปกรณ์โรงงานอุตสาหกรรม,เครื่องดูดอากาศ,อะไหล่ตู้ไฟ,เบรคเกอร์,ให้คำปรึกษาเปิดโรงชุบ,ศรีวิชัยโลหะกิจ",
-    ogTitle: "ศรีวิชัยโลหะกิจ | อุปกรณ์การชุบและโซลูชันโรงชุบครบวงจร",
-    ogDescription:
-        "ให้คำปรึกษาและจำหน่ายอุปกรณ์การชุบครบวงจร ตั้งแต่โรงชุบขนาดเล็กถึงขนาดใหญ่ โดยทีมงานประสบการณ์กว่า 20 ปี",
-    ogType: "website",
-    ogUrl: "https://www.facebook.com/swclohakit",
-    ogImage: "/logo.svg",
-    twitterCard: "summary_large_image",
-    twitterImage: "/logo.svg",
-});
-
+// Layout ตั้งค่า fallback ขั้นต่ำเท่านั้น — ทุก page override ด้วย useSeoPage() ของตัวเอง
 useHead({
-    link: [{ rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
+    link: [
+        // favicon.ico (4KB) แทน logo.svg (16KB) — ลด overhead ต่อทุก request
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
+    htmlAttrs: { lang: 'th' },
 });
 </script>

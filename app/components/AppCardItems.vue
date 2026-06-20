@@ -5,7 +5,8 @@
       :key="item.title"
       class="rounded-xl border border-(--swc-border) bg-(--swc-surface) p-5 text-(--swc-text-color)"
     >
-      <Icon :name="item.icon" class="text-3xl text-(--swc-main-color)" />
+      <!-- width/height กำหนดชัดเพื่อจอง space ก่อน hydration — ป้องกัน CLS -->
+      <Icon :name="item.icon" class="text-(--swc-main-color)" style="width:1.875rem;height:1.875rem;display:block;" />
       <h3 class="mt-4 text-lg font-semibold">{{ item.title }}</h3>
       <p class="mt-2 text-sm leading-6 text-(--swc-text-muted)">{{ item.description }}</p>
     </article>

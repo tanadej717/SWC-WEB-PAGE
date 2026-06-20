@@ -31,6 +31,8 @@
   --swc-surface: var(--swc-gray-100);
   --swc-surface-2: var(--swc-gray-200);
   --swc-card: var(--swc-gray-50);
+  /* พื้นหลัง sticky header โปร่งแสง — คู่กับ backdrop-blur ตอน scroll */
+  --swc-header-bg: #f2f2f2cc;
   --swc-border: #33333333;
   --swc-history-track: var(--swc-gray-300);
   --swc-history-dot: var(--swc-gray-200);
@@ -49,6 +51,7 @@
   --swc-surface: #333333;
   --swc-surface-2: #4d4d4d;
   --swc-card: #191919;
+  --swc-header-bg: #1f1f1fcc;
   --swc-border: #e6e6e633;
   --swc-history-track: #666666;
   --swc-history-dot: #808080;

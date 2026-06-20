@@ -26,6 +26,11 @@
               :alt="product.alt"
               class="absolute inset-0 -z-20 h-full w-full object-cover transition duration-500 group-hover:scale-105"
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              width="800"
+              height="600"
+              format="webp"
+              quality="80"
+              loading="lazy"
             />
             <div class="absolute inset-0 -z-10 bg-linear-to-t from-black/80 via-black/30 to-black/5" />
 
@@ -34,7 +39,7 @@
                 {{ product.category }}
               </span>
               <div>
-                <h2 class="text-2xl font-semibold leading-tight">{{ product.title }}</h2>
+                <h3 class="text-2xl font-semibold leading-tight">{{ product.title }}</h3>
                 <p class="mt-3 max-w-xl text-sm leading-6 text-white/80">{{ product.description }}</p>
               </div>
             </div>
@@ -51,7 +56,7 @@
           </div>
           <NuxtLink
             to="/contact"
-            class="inline-flex min-h-12 items-center justify-center bg-(--swc-main-color) px-6 text-sm font-semibold text-white transition hover:bg-(--swc-red-700)"
+            class="inline-flex min-h-12 items-center justify-center bg-(--swc-main-color) px-6 text-sm font-semibold text-white transition-colors hover:bg-(--swc-red-700)"
           >
             ติดต่อเรา
           </NuxtLink>
@@ -107,8 +112,9 @@ const products = [
   },
 ];
 
-useSeoMeta({
-  title: "สินค้าของเรา | ศรีวิชัยโลหะกิจ",
-  description: "รวมสินค้าอุปกรณ์งานชุบ ตู้ไฟ น้ำยา อะไหล่ และอุปกรณ์โรงงานอุตสาหกรรมจากศรีวิชัยโลหะกิจ",
+useSeoPage({
+  title: 'สินค้าของเรา | ศรีวิชัยโลหะกิจ',
+  description: 'รวมสินค้าอุปกรณ์งานชุบ ตู้ไฟ น้ำยาชุบนิกเกิล น้ำยาชุบทองแดง อะไหล่ตู้ไฟ เบรคเกอร์ และอุปกรณ์โรงงานอุตสาหกรรมจากศรีวิชัยโลหะกิจ',
+  path: '/products',
 });
 </script>
