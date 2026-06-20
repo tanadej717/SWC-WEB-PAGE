@@ -10,7 +10,7 @@
           <p class="text-sm text-(--swc-gray-100)">
             เราให้บริการและดูแลด้วยมาตรฐานมืออาชีพ ใส่ใจคุณภาพในทุกขั้นตอน
           </p>
-        </div>
+        </section>
 
         <div class="space-y-3">
           <div class="text-sm font-semibold uppercase tracking-wider text-(--swc-gray-100)">ติดต่อเรา</div>
@@ -48,3 +48,7 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const currentYear = useState("current-year", () => new Date().getFullYear());
+</script>
