@@ -1,11 +1,5 @@
 <template>
-  <div class="bg-(--swc-card) text-(--swc-text-color)">
-    <HeroContent />
-    <Content1 />
-    <Content2 />
-    <AppHistorybar />
-    <Content3 />
-  </div>
+    <h1>hellow home</h1>
 </template>
 
 <script setup lang="ts">

@@ -1,19 +1,15 @@
 <template>
   <header class="border-b bg-(--swc-surface) text-(--swc-text-color)" style="border-color: var(--swc-border);">
     <div class="container mx-auto flex h-16 items-center justify-between px-4">
-      <NuxtLink to="/" class="group flex items-center gap-3 rounded-circle">
-        <NuxtImg
-          src="/logo.svg"
-          alt="SWC Logo"
-          loading="lazy"
-          decoding="async"
-          width="64"
-          height="64"
-          class="h-16 w-16 rounded-circle p-1 transition-transform group-hover:scale-110"
-        />
-        <span class="hidden text-xs font-semibold uppercase tracking-widest text-(--swc-main-color) sm:block">
-          SWC
-        </span>
+      <NuxtLink to="/" class="group flex items-center gap-3">
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-(--swc-red-900) bg-(--swc-red-800) text-(--swc-white) text-xs font-semibold tracking-widest shadow-md"
+        >
+          S.W.C
+        </div>
+        <div class="hidden text-xs font-semibold uppercase tracking-widest text-(--swc-red-900) sm:block">
+          Service • Quality • Care
+        </div>
       </NuxtLink>
 
       <nav class="hidden items-center gap-6 text-sm md:flex" aria-label="Main navigation">
